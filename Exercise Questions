@@ -1,0 +1,13 @@
+
+8 - Dimensionality Reduction
+What are the main motivations for reducing a dataset’s dimensionality? What are the main drawbacks?
+What is the curse of dimensionality?
+Once a dataset’s dimensionality has been reduced, is it possible to reverse the operation? If so, how? If not, why?
+Can PCA be used to reduce the dimensionality of a highly nonlinear dataset?
+Suppose you perform PCA on a 1,000-dimensional dataset, setting the explained variance ratio to 95%. How many dimensions will the resulting dataset have?
+In what cases would you use regular PCA, incremental PCA, randomized PCA, or random projection?
+How can you evaluate the performance of a dimensionality reduction algorithm on your dataset?
+Does it make any sense to chain two different dimensionality reduction algorithms?
+Load the MNIST dataset (introduced in Chapter 3) and split it into a training set and a test set (take the first 60,000 instances for training, and the remaining 10,000 for testing). Train a random forest classifier on the dataset and time how long it takes, then evaluate the resulting model on the test set. Next, use PCA to reduce the dataset’s dimensionality, with an explained variance ratio of 95%. Train a new random forest classifier on the reduced dataset and see how long it takes. Was training much faster? Next, evaluate the classifier on the test set. How does it compare to the previous classifier? Try again with an SGDClassifier. How much does PCA help now?
+Use t-SNE to reduce the first 5,000 images of the MNIST dataset down to 2 dimensions and plot the result using Matplotlib. You can use a scatterplot using 10 different colors to represent each image’s target class. Alternatively, you can replace each dot in the scatterplot with the corresponding instance’s class (a digit from 0 to 9), or even plot scaled-down versions of the digit images themselves (if you plot all digits the visualization will be too cluttered, so you should either draw a random sample or plot an instance only if no other instance has already been plotted at a close distance). You should get a nice visualization with well-separated clusters of digits. Try using other dimensionality reduction algorithms, such as PCA, LLE, or MDS, and compare the resulting visualizations.
+Solutions to these exercises are available at the end of this chapter’s notebook, at https://homl.info/colab3.
